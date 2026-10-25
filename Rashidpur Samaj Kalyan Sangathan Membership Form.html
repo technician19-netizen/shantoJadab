@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সদস্য ভর্তি ফরম - রশিদপুর সমাজকল্যাণ সংগঠন</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Bangla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .bengali-serif {
+            font-family: 'Noto Serif Bengali', serif;
+        }
+        .form-border {
+            border: 3px solid #006633;
+        }
+        .section-header-red {
+            background-color: #d90429;
+            color: white;
+        }
+        .section-header-blue {
+            background-color: #004b87;
+            color: white;
+        }
+        .section-header-green {
+            background-color: #006633;
+            color: white;
+        }
+        .section-header-purple {
+            background-color: #6a097d;
+            color: white;
+        }
+
+        /* Print styling rules */
+        @media print {
+            body {
+                background-color: white !important;
+                padding: 0 !important;
+            }
+            .form-border {
+                border: 2px solid #000 !important;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            input, select, textarea {
+                border-bottom: 1px solid #000 !important;
+                border-top: none !important;
+                border-left: none !important;
+                border-right: none !important;
+                background: transparent !important;
+            }
+        }
+    </style>
+</head>
+<body class="p-2 sm:p-4 md:p-6 min-h-screen">
+
+    <!-- Container Form -->
+    <div id="printableForm" class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl form-border overflow-hidden relative p-4 sm:p-8">
+        
+        <!-- Top Header & Crest Section -->
+        <header class="text-center relative border-b-2 border-green-700 pb-6 mb-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                
+                <!-- SVG Emblem Logo Recreated matching uploaded image -->
+                <div class="w-32 h-36 flex items-center justify-center shrink-0">
+                    <svg viewBox="0 0 300 340" class="w-full h-full drop-shadow-md">
+                        <defs>
+                            <path id="textArcTop" d="M 50,150 A 100,100 0 0,1 250,150" />
+                            <path id="textArcBottom" d="M 235,165 A 90,90 0 0,1 65,165" />
+                            <path id="bannerArc" d="M 40,290 Q 150,330 260,290" />
+                        </defs>
+
+                        <!-- Outer Leaf Wreath (Blue Laurel) -->
+                        <g fill="#1a4086">
+                            <!-- Left Leaves -->
+                            <path d="M 35,90 C 20,110 25,140 40,160 C 20,140 10,110 35,90 Z"/>
+                            <path d="M 20,120 C 5,140 10,170 30,190 C 10,170 0,140 20,120 Z"/>
+                            <path d="M 25,160 C 10,185 20,215 40,230 C 20,210 10,185 25,160 Z"/>
+                            <path d="M 40,200 C 30,225 45,250 65,265 C 45,245 35,225 40,200 Z"/>
+                            <path d="M 55,65 C 40,80 40,105 60,125 C 40,105 35,80 55,65 Z"/>
+                            <!-- Right Leaves -->
+                            <path d="M 265,90 C 280,110 275,140 260,160 C 280,140 290,110 265,90 Z"/>
+                            <path d="M 280,120 C 295,140 290,170 270,190 C 290,170 300,140 280,120 Z"/>
+                            <path d="M 275,160 C 290,185 280,215 260,230 C 280,210 290,185 275,160 Z"/>
+                            <path d="M 260,200 C 270,225 255,250 235,265 C 255,245 265,225 260,200 Z"/>
+                            <path d="M 245,65 C 260,80 260,105 240,125 C 260,105 265,80 245,65 Z"/>
+                        </g>
+
+                        <!-- Outer Red Circle Band -->
+                        <circle cx="150" cy="150" r="110" fill="#7a0c2e" stroke="#1a4086" stroke-width="4"/>
+                        <circle cx="150" cy="150" r="82" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+
+                        <!-- Circular Curved Text inside Red Band -->
+                        <text fill="#ffffff" font-size="17" font-weight="bold" font-family="'Hind Siliguri', sans-serif">
+                            <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+                                রশিদপুর সমাজকল্যাণ সংগঠন
+                            </textPath>
+                        </text>
+
+                        <!-- Stars & Established Year Text -->
+                        <text fill="#ffffff" font-size="14" x="65" y="160">★</text>
+                        <text fill="#ffffff" font-size="12" x="65" y="180">★</text>
+                        <text fill="#ffffff" font-size="14" x="225" y="160">★</text>
+                        <text fill="#ffffff" font-size="12" x="225" y="180">★</text>
+                        
+                        <text fill="#ffffff" font-size="17" font-weight="bold" font-family="'Hind Siliguri', sans-serif">
+                            <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">
+                                স্থাপিত : ২০২৬
+                            </textPath>
+                        </text>
+
+                        <!-- Inner Circle Content (Unity Hands Circle Icon) -->
+                        <circle cx="150" cy="150" r="50" fill="#7a0c2e"/>
+                        <circle cx="150" cy="150" r="48" fill="#ffffff"/>
+                        
+                        <!-- Unity Icon (People Hands Ring) -->
+                        <g transform="translate(150, 130) scale(0.65)">
+                            <!-- People Ring Icons -->
+                            <circle cx="0" cy="-22" r="7" fill="#800000"/>
+                            <circle cx="21" cy="-7" r="7" fill="#008080"/>
+                            <circle cx="21" cy="17" r="7" fill="#800080"/>
+                            <circle cx="0" cy="27" r="7" fill="#4B0082"/>
+                            <circle cx="-21" cy="17" r="7" fill="#006400"/>
+                            <circle cx="-21" cy="-7" r="7" fill="#FF4500"/>
+                            <!-- Connecting ring -->
+                            <path d="M 0,-12 A 18,18 0 1,1 -0.1,-12" fill="none" stroke="#7a0c2e" stroke-width="4"/>
+                        </g>
+
+                        <!-- Address Inside Circle -->
+                        <text x="150" y="165" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle" font-family="'Hind Siliguri', sans-serif">
+                            রশিদপুর চা বাগান
+                        </text>
+                        <text x="150" y="176" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle" font-family="'Hind Siliguri', sans-serif">
+                            বাহুবল হবিগঞ্জ
+                        </text>
+
+                        <!-- Bottom Ribbon Banner -->
+                        <path d="M 30,285 Q 150,325 270,285 L 260,315 Q 150,350 40,315 Z" fill="#0f6b58" stroke="#ffffff" stroke-width="2"/>
+                        <text fill="#ffffff" font-size="14" font-weight="bold" font-family="'Hind Siliguri', sans-serif">
+                            <textPath href="#bannerArc" startOffset="50%" text-anchor="middle">
+                                সমৃদ্ধ সমাজ বিনির্মাণে আমরা ঐক্যবদ্ধ
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- Banner Info -->
+                <div class="flex-1 text-center">
+                    <h1 class="text-2xl sm:text-4xl font-extrabold text-red-700 bengali-serif tracking-wide drop-shadow-sm">
+                        রশিদপুর সমাজকল্যাণ সংগঠন
+                    </h1>
+                    <p class="text-base sm:text-lg font-semibold text-green-800 mt-1">
+                        রশিদপুর চা বাগান, বাহুবল, হবিগঞ্জ।
+                    </p>
+                    <div class="inline-block bg-green-800 text-white font-bold text-lg sm:text-xl px-8 py-1.5 rounded-full mt-2 shadow-md">
+                        সদস্য ভর্তি ফরম
+                    </div>
+                    <p class="text-sm sm:text-base font-bold text-red-600 mt-2 italic">
+                        "সমৃদ্ধ সমাজ বিনির্মাণে আমরা ঐক্যবদ্ধ"
+                    </p>
+                </div>
+
+                <!-- Photo Frame Box -->
+                <div class="w-32 h-40 border-2 border-blue-600 border-dashed rounded-lg flex flex-col items-center justify-center bg-blue-50/50 p-2 text-center relative group shrink-0">
+                    <input type="file" id="photoUpload" accept="image/*" class="hidden" onchange="previewImage(event)">
+                    <div id="photoPlaceholder" class="flex flex-col items-center justify-center cursor-pointer" onclick="document.getElementById('photoUpload').click()">
+                        <i class="fa-solid fa-camera text-3xl text-blue-500 mb-1"></i>
+                        <span class="text-xs text-blue-800 font-bold">পাসপোর্ট সাইজ ছবি</span>
+                        <span class="text-[10px] text-gray-500 mt-1">(এখানে ক্লিক করুন)</span>
+                    </div>
+                    <img id="photoPreview" class="hidden w-full h-full object-cover rounded" alt="Member Photo">
+                    <button type="button" id="removePhotoBtn" onclick="removeImage()" class="hidden absolute top-1 right-1 bg-red-600 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center shadow no-print">✕</button>
+                </div>
+            </div>
+
+            <!-- Date & Admission No Inputs -->
+            <div class="flex flex-wrap justify-between items-center mt-6 pt-4 border-t border-gray-200 gap-4 text-sm font-semibold">
+                <div class="flex items-center gap-2">
+                    <label for="formDate" class="text-gray-800 font-bold">তারিখ :</label>
+                    <input type="date" id="formDate" class="border-b-2 border-gray-400 focus:border-green-600 outline-none px-2 py-0.5 bg-transparent">
+                </div>
+                <div class="flex items-center gap-2">
+                    <label for="admissionNo" class="text-gray-800 font-bold">ভর্তি নং :</label>
+                    <input type="text" id="admissionNo" placeholder="অফিসিয়াল পূরণ করবে" class="border-b-2 border-gray-400 focus:border-green-600 outline-none px-2 py-0.5 bg-transparent w-40 text-center font-bold text-red-600">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Form Entry -->
+        <form id="admissionForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+
+            <!-- 1. Personal Information Section -->
+            <div class="border rounded-lg overflow-hidden border-red-200 shadow-sm">
+                <div class="section-header-red px-4 py-2 font-bold text-base sm:text-lg flex items-center gap-2">
+                    <span>১.</span> ব্যক্তিগত তথ্য
+                </div>
+                <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 bg-red-50/20">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">১. নাম (বাংলায়) <span class="text-red-500">*</span></label>
+                        <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="আপনার পুরো নাম বাংলাতে লিখুন">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">২. নাম (ইংরেজিতে) <span class="text-red-500">*</span></label>
+                        <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none uppercase" placeholder="FULL NAME IN ENGLISH (CAPITAL LETTERS)">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৩. পিতার নাম <span class="text-red-500">*</span></label>
+                        <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="পিতার নাম লিখুন">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৪. মাতার নাম <span class="text-red-500">*</span></label>
+                        <input type="text" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="মাতার নাম লিখুন">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৫. জন্ম তারিখ <span class="text-red-500">*</span></label>
+                        <input type="date" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৬. জাতীয় পরিচয় পত্র (NID) / জন্ম নিবন্ধন নং</label>
+                        <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="NID অথবা জন্ম নিবন্ধন নম্বর">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৭. মোবাইল নং <span class="text-red-500">*</span></label>
+                        <input type="tel" required pattern="[0-9]{11}" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="01XXXXXXXXX">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৮. ইমেইল (যদি থাকে)</label>
+                        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="example@mail.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৯. ধর্ম</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none bg-white">
+                            <option value="ইসলাম">ইসলাম</option>
+                            <option value="সনাতন (হিন্দু)">সনাতন (হিন্দু)</option>
+                            <option value="বৌদ্ধ">বৌদ্ধ</option>
+                            <option value="খ্রিস্টান">খ্রিস্টান</option>
+                            <option value="অন্যান্য">অন্যান্য</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">১০. বৈবাহিক অবস্থা</label>
+                        <div class="flex items-center gap-6 py-2">
+                            <label class="flex items-center gap-2 cursor-pointer font-medium text-gray-800">
+                                <input type="radio" name="maritalStatus" value="অবিবাহিত" checked class="text-red-600 focus:ring-red-500">
+                                <span>অবিবাহিত</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer font-medium text-gray-800">
+                                <input type="radio" name="maritalStatus" value="বিবাহিত" class="text-red-600 focus:ring-red-500">
+                                <span>বিবাহিত</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">১১. বর্তমান পেশা</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="ছাত্র/পেশাজীবী/ব্যবসা/চাকরি">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">১২. শিক্ষাগত যোগ্যতা</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 outline-none" placeholder="সর্বশেষ শিক্ষাগত যোগ্যতা">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Address Section -->
+            <div class="border rounded-lg overflow-hidden border-blue-200 shadow-sm">
+                <div class="section-header-blue px-4 py-2 font-bold text-base sm:text-lg flex items-center gap-2">
+                    <span>২.</span> ঠিকানা
+                </div>
+                <div class="p-4 space-y-4 bg-blue-50/20">
+                    <!-- Permanent Address -->
+                    <div>
+                        <h4 class="font-bold text-gray-800 border-b pb-1 mb-2 text-sm flex items-center gap-1">
+                            <i class="fa-solid fa-house-chimney text-blue-600"></i> স্থায়ী ঠিকানা:
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">গ্রাম/মহল্লা</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="গ্রাম / মহল্লা">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">উপজেলা</label>
+                                <input type="text" required value="বাহুবল" class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">জেলা</label>
+                                <input type="text" required value="হবিগঞ্জ" class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Current Address -->
+                    <div>
+                        <h4 class="font-bold text-gray-800 border-b pb-1 mb-2 text-sm flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-blue-600"></i> বর্তমান ঠিকানা:
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">গ্রাম/মহল্লা</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="গ্রাম / মহল্লা">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">ইউনিয়ন</label>
+                                <input type="text" class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="ইউনিয়ন">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">উপজেলা</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="উপজেলা">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">জেলা</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="জেলা">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Other Information Section -->
+            <div class="border rounded-lg overflow-hidden border-green-200 shadow-sm">
+                <div class="section-header-green px-4 py-2 font-bold text-base sm:text-lg flex items-center gap-2">
+                    <span>৩.</span> অন্যান্য তথ্য
+                </div>
+                <div class="p-4 space-y-4 bg-green-50/20">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">১. আপনি কি অন্য কোনো সংগঠনের সদস্য?</label>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <div class="flex items-center gap-4">
+                                <label class="flex items-center gap-1 cursor-pointer">
+                                    <input type="radio" name="otherOrg" value="হ্যাঁ" onchange="toggleOrgInput(true)" class="text-green-600 focus:ring-green-500">
+                                    <span>হ্যাঁ</span>
+                                </label>
+                                <label class="flex items-center gap-1 cursor-pointer">
+                                    <input type="radio" name="otherOrg" value="না" checked onchange="toggleOrgInput(false)" class="text-green-600 focus:ring-green-500">
+                                    <span>না</span>
+                                </label>
+                            </div>
+                            <input type="text" id="otherOrgName" disabled placeholder="যদি হ্যাঁ হয়, সংগঠনের নাম লিখুন" class="flex-1 min-w-[200px] px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 outline-none text-sm bg-gray-100 disabled:opacity-50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">২. আপনার বিশেষ দক্ষতা (যদি থাকে):</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 outline-none" placeholder="যেমন: খেলাধুলা, সাংস্কৃতিক, গ্রাফিক্স ডিজাইন, স্বেচ্ছাসেবী ইত্যাদি">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-1">৩. সংগঠনের মাধ্যমে কী ধরনের কাজ করতে আগ্রহী?</label>
+                        <textarea rows="2" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 outline-none" placeholder="সমাজসেবামূলক কাজ, বৃক্ষরোপণ, রক্তদান, শিক্ষা ইত্যাদি..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Guardian Consent & Blood Group -->
+            <div class="border rounded-lg overflow-hidden border-purple-200 shadow-sm">
+                <div class="section-header-purple px-4 py-2 font-bold text-base sm:text-lg flex items-center gap-2">
+                    <span>৪.</span> অভিভাবক সম্মতি ও রক্তের গ্রুপ
+                </div>
+                <div class="p-4 grid grid-cols-1 lg:grid-cols-3 gap-6 bg-purple-50/20">
+                    
+                    <!-- Consent Text & Guardian Details -->
+                    <div class="lg:col-span-2 space-y-3 border-r border-gray-200 pr-0 lg:pr-4">
+                        <div class="text-xs sm:text-sm text-gray-700 bg-purple-100/60 p-3 rounded-lg border border-purple-200 leading-relaxed font-medium">
+                            আমি 
+                            <input type="text" required placeholder="অভিভাবকের নাম" class="px-2 py-0.5 border-b-2 border-purple-700 bg-white rounded outline-none text-sm font-bold text-purple-900 inline-block w-44 mx-1">
+                            , এতদ্বারা ঘোষণা করছি যে, উল্লিখিত সদস্যের পূর্বাঙ্গ তথ্য সঠিক এবং সে আমার অভিভাবকত্বে সংগঠনের কার্যক্রমে অংশ নিতে সম্মত। আমি তার সার্বিক নিরাপত্তা ও কল্যাণের দায়িত্বভার গ্রহণ করলাম।
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">অভিভাবকের নাম</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 outline-none text-sm" placeholder="অভিভাবকের নাম">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">সম্পর্ক</label>
+                                <input type="text" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 outline-none text-sm" placeholder="পিতা / মাতা / ভাই ইত্যাদি">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">অভিভাবকের মোবাইল নং</label>
+                                <input type="tel" pattern="[0-9]{11}" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 outline-none text-sm" placeholder="01XXXXXXXXX">
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-600 font-semibold">তারিখ</label>
+                                <input type="date" required class="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 outline-none text-sm">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blood Group Box -->
+                    <div class="bg-red-50 p-4 rounded-xl border border-red-300 flex flex-col justify-between">
+                        <div class="flex items-center gap-2 text-red-700 font-bold border-b border-red-200 pb-2 mb-3">
+                            <i class="fa-solid fa-droplet text-xl text-red-600"></i>
+                            <span>রক্তের গ্রুপ (Blood Group)</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="A+" required class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">A+</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="A-" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">A-</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="B+" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">B+</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="B-" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">B-</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="AB+" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">AB+</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="AB-" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">AB-</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="O+" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">O+</span>
+                            </label>
+                            <label class="flex items-center justify-center p-2 bg-white border border-red-200 rounded-lg cursor-pointer hover:bg-red-100 transition-colors">
+                                <input type="radio" name="bloodGroup" value="O-" class="text-red-600 mr-2">
+                                <span class="font-bold text-gray-800">O-</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="text-center pt-4 flex flex-wrap justify-center gap-4 no-print">
+                <button type="submit" class="bg-green-700 hover:bg-green-800 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    অনলাইনে সাবমিট করুন (Submit Form)
+                </button>
+
+                <button type="button" onclick="window.print()" class="bg-blue-700 hover:bg-blue-800 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-print"></i>
+                    প্রিন্ট / সেভ করুন (Print PDF)
+                </button>
+            </div>
+        </form>
+
+        <!-- Official Signatures Bottom Section -->
+        <footer class="mt-12 border-t-2 border-dashed border-gray-300 pt-8">
+            <div class="text-center mb-6">
+                <span class="bg-green-800 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">সংগঠনের পক্ষ থেকে (অফিসিয়াল ব্যবহারের জন্য)</span>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs font-semibold text-gray-700">
+                <div class="border-t border-gray-400 pt-3">
+                    প্রার্থী/সভাপতি স্বাক্ষর<br><span class="text-[10px] text-gray-500">(নাম ও স্বাক্ষর)</span>
+                </div>
+                <div class="border-t border-gray-400 pt-3">
+                    সচিব/সম্পাদক স্বাক্ষর<br><span class="text-[10px] text-gray-500">(নাম ও স্বাক্ষর)</span>
+                </div>
+                <div class="border-t border-gray-400 pt-3">
+                    সাধারণ সম্পাদক/সভাপতি স্বাক্ষর<br><span class="text-[10px] text-gray-500">(নাম ও স্বাক্ষর)</span>
+                </div>
+                <div class="border-t border-gray-400 pt-3 relative">
+                    অফিসিয়াল সিল
+                    <div class="w-16 h-16 border-2 border-dashed border-gray-400 rounded-full mx-auto mt-1 flex items-center justify-center text-[10px] text-gray-400">
+                        মোহর/সিল
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Submission Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50 no-print">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl transform transition-all">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-3xl mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">আবেদনটি সফলভাবে জমা হয়েছে!</h3>
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                আপনার 'রশিদপুর সমাজকল্যাণ সংগঠন'-এর সদস্য ভর্তি ফরমের সমস্ত তথ্য সফলভাবে নেওয়া হয়েছে।
+            </p>
+            <div class="space-y-3">
+                <button onclick="window.print()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg flex items-center justify-center gap-2 shadow">
+                    <i class="fa-solid fa-print"></i> কপি প্রিন্ট অথবা PDF ডাউনলোড করুন
+                </button>
+                <button onclick="closeModal()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 rounded-lg">
+                    বন্ধ করুন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logic JavaScript -->
+    <script>
+        // Auto set today's date
+        document.getElementById('formDate').valueAsDate = new Date();
+
+        // Image Preview Handler
+        function previewImage(event) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('photoPreview');
+                    const placeholder = document.getElementById('photoPlaceholder');
+                    const removeBtn = document.getElementById('removePhotoBtn');
+                    
+                    preview.src = e.target.result;
+                    preview.classList.remove('hidden');
+                    placeholder.classList.add('hidden');
+                    removeBtn.classList.remove('hidden');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Remove Selected Image
+        function removeImage() {
+            const input = document.getElementById('photoUpload');
+            const preview = document.getElementById('photoPreview');
+            const placeholder = document.getElementById('photoPlaceholder');
+            const removeBtn = document.getElementById('removePhotoBtn');
+
+            input.value = '';
+            preview.src = '';
+            preview.classList.add('hidden');
+            placeholder.classList.remove('hidden');
+            removeBtn.classList.add('hidden');
+        }
+
+        // Dynamic Field for Other Organization
+        function toggleOrgInput(enable) {
+            const input = document.getElementById('otherOrgName');
+            input.disabled = !enable;
+            if (enable) {
+                input.classList.remove('bg-gray-100');
+                input.focus();
+            } else {
+                input.classList.add('bg-gray-100');
+                input.value = '';
+            }
+        }
+
+        // Form Submit Action
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('successModal').classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
